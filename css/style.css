@@ -1,0 +1,208 @@
+/* @link https://utopia.fyi/generator-mk-ii?c=320,14,1.2,1140,24,1.25,4,3, */
+
+:root {
+  --fluid-min-width: 320;
+  --fluid-max-width: 1140;
+
+  --fluid-screen: 100vw;
+  --fluid-bp: calc(
+    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+      (var(--fluid-max-width) - var(--fluid-min-width))
+  );
+}
+
+@media screen and (min-width: 1140px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
+
+:root {
+  --f--3-min: 8.10;
+  --f--3-max: 12.29;
+  --step--3: calc(
+    ((var(--f--3-min) / 16) * 1rem) + (var(--f--3-max) - var(--f--3-min)) *
+      var(--fluid-bp)
+  );
+
+  --f--2-min: 9.72;
+  --f--2-max: 15.36;
+  --step--2: calc(
+    ((var(--f--2-min) / 16) * 1rem) + (var(--f--2-max) - var(--f--2-min)) *
+      var(--fluid-bp)
+  );
+
+  --f--1-min: 11.67;
+  --f--1-max: 19.20;
+  --step--1: calc(
+    ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-0-min: 14.00;
+  --f-0-max: 24.00;
+  --step-0: calc(
+    ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-1-min: 16.80;
+  --f-1-max: 30.00;
+  --step-1: calc(
+    ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-2-min: 20.16;
+  --f-2-max: 37.50;
+  --step-2: calc(
+    ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-3-min: 24.19;
+  --f-3-max: 46.88;
+  --step-3: calc(
+    ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-4-min: 29.03;
+  --f-4-max: 58.59;
+  --step-4: calc(
+    ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
+      var(--fluid-bp)
+  );
+}
+
+/* ------------------------------ Espacio Responsive ------------------------*/
+
+ .container-fluid {
+    padding-right: 0px;
+ }
+
+ .row {
+   margin-right: 0px;
+ }
+  .form-control {
+      width: calc(var(--step--3)*23);
+      margin: 1% auto;
+  }
+
+  .form-control:focus{
+    border-color: #e6c844;
+    box-shadow: 0 0 0 0.15rem rgb(242, 255, 123) !important;
+  }
+  
+  .form-group{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+  }
+
+  .input-group {
+    margin: 0;
+  }
+
+  .formulario, .col-lg-8 {
+    padding: 0;
+  }
+
+  label {
+    position: relative;
+    top: 12px;
+    margin: 0 2% 2% 0;
+    color: rgb(0, 0, 0);
+    font-size: var(--step--1);
+
+  }
+  
+.input-group-prepend {
+  margin-left: auto;
+}
+
+  #telefono {
+    width:  calc(var(--step--3)*18.2);
+    margin-right: auto;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+  }
+
+  #telefono:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #e6c844;
+    outline: 0;
+    box-shadow: 0 0 0 0.15rem rgb(242, 255, 123) !important;
+  }
+
+  
+  #mensajeErrorCampos {
+    color: rgb(255, 0, 0);
+    font-size: var(--step--1) !important;
+    background-color:rgb(202, 202, 202);
+    box-shadow: rgb(105, 105, 105) 1px 1px 10px;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding:2%;
+    width: fit-content;
+
+  }
+
+  #mensajeErrorCampos p{
+    margin: 2%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  }
+
+  #mensajeErrorCampos .titulo {
+    text-decoration: underline;
+  }
+  
+  #mensajeExitoso {
+    color: rgb(28, 97, 28);
+    font-size: var(--step--1);
+  }
+  
+  .ventana {
+      background-color: rgb(92, 92, 92);
+      box-shadow: black 1px 1px 5px;
+     
+  }
+
+  .ventana h3, .ventana p{
+    color: white;
+    margin: 4% 1% 0 4%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  footer {
+    background-color: black;
+    height: 4vh;
+  }
+  
+  footer p{
+    color: white;
+    text-align: right;
+    margin-right: 2%;
+  }
+
+  #botonEnviar {
+    margin-bottom: 150px;
+    box-shadow:0px 0px 5px 2px #e0e0e0;border:1px solid #b4b4b4;
+    background-color: #e9ecef;
+  }
+
+  #botonEnviar:hover {
+    box-shadow: 0 0 0 0.15rem rgb(242, 255, 123);
+    background-color: #ffffff;
+  }
+
+
+  @media (max-width: 940px){
+    .ventana {
+      display: none;
+    }
+  }
+
+
+
